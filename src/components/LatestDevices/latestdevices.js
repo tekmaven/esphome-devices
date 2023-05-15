@@ -19,6 +19,7 @@ const FilterDevices = () => {
               title
               type
               standard
+              board
             }
           }
         }
