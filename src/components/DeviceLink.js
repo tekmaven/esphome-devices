@@ -83,7 +83,7 @@ export function ProjectUrl({ project_url }) {
 export function DeviceLink({ slug, title, type, standard, board }) {
   return (
     <>
-      <Link to={`/${slug}`}>{title}</Link>
+      <Link to={slug}>{title}</Link>
       <TypeTag type={type} />
       <StandardTag standard={standard} />
       <BoardTag board={board} />

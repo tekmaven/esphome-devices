@@ -8,7 +8,7 @@ import PostNav from "./PostNav";
 import EditGithub from "./EditGithub";
 import DeviceData from "../../../../components/DeviceData/devicedata";
 
-export default function Docs({ mdx, pageContext }) {
+export default function Docs({ mdx, pageContext, children }) {
   const { prev, next, repositoryEditUrl, repositoryProvider } = pageContext;
   const { title, description, image, disableTableOfContents } = mdx.frontmatter;
   const { headings, body, id } = mdx;
@@ -23,7 +23,7 @@ export default function Docs({ mdx, pageContext }) {
         headings={headings}
       >
         <DeviceData deviceId={id} />
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
         <EditGithub
           repositoryEditUrl={repositoryEditUrl}
           repositoryProvider={repositoryProvider}
@@ -55,4 +55,5 @@ Docs.propTypes = {
     repositoryEditUrl: PropTypes.string,
     repositoryProvider: PropTypes.string,
   }).isRequired,
+  children: PropTypes.node.isRequired,
 };

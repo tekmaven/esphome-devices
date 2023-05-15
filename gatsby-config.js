@@ -43,6 +43,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
+        homePath: `src/home`,
         repositoryUrl: `https://github.com/esphome/esphome-devices`,
         baseDir: ``,
       },
@@ -67,14 +68,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require("./src/utils/algolia-queries"),
-        skipIndexing: skipAlgoliaPlugin,
-      },
-    },
   ],
 };

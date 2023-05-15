@@ -6,7 +6,7 @@ import { DeviceLink } from "../DeviceLink";
 const FilterDevices = ({ filterDeviceType, filterStandard, filterBoard }) => {
   const data = useStaticQuery(graphql`
     {
-      allMdx(sort: { fields: frontmatter___title }) {
+      allMdx(sort: {frontmatter: {title: ASC}}) {
         edges {
           node {
             id
@@ -16,7 +16,9 @@ const FilterDevices = ({ filterDeviceType, filterStandard, filterBoard }) => {
               standard
               board
             }
-            slug
+            fields {
+              slug
+            }
           }
         }
       }
@@ -44,7 +46,7 @@ const FilterDevices = ({ filterDeviceType, filterStandard, filterBoard }) => {
   const mapped = filtered?.map(({ node }) => {
     return {
       id: node.id,
-      slug: node.slug,
+      slug: node?.fields?.slug,
       title: node?.frontmatter?.title,
       type: filterDeviceType ? null : node?.frontmatter?.type,
       board: filterBoard ? null : node?.frontmatter?.board?.toLowerCase(),

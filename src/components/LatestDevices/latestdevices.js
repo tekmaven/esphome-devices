@@ -6,14 +6,16 @@ const FilterDevices = () => {
   const data = useStaticQuery(graphql`
     {
       allMdx(
-        sort: { fields: frontmatter___date_published, order: DESC }
+        sort: {frontmatter: {date_published: DESC}}
         limit: 10
         filter: { frontmatter: { date_published: { gte: "2000-01-01" } } }
       ) {
         edges {
           node {
             id
-            slug
+            fields {
+              slug
+            }
             frontmatter {
               date_published
               title
@@ -30,7 +32,7 @@ const FilterDevices = () => {
   const mapped = data?.allMdx?.edges?.map(({ node }) => {
     return {
       id: node.id,
-      slug: node.slug,
+      slug: node?.fields?.slug,
       ...node?.frontmatter,
     };
   });

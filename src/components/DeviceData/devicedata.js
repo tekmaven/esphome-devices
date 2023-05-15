@@ -4,7 +4,7 @@ import { TypeTag, StandardTag, MadeForESPHomeLogo, DifficultyLookup, BoardTag, P
 const DeviceData = ({ deviceId }) => {
   const data = useStaticQuery(graphql`
     {
-      allMdx(sort: { fields: frontmatter___title }) {
+      allMdx(sort: {frontmatter: {title: ASC}}) {
         edges {
           node {
             id
@@ -17,7 +17,9 @@ const DeviceData = ({ deviceId }) => {
               made_for_esphome
               difficulty
             }
-            slug
+            fields {
+              slug
+            }
           }
         }
       }
@@ -32,7 +34,7 @@ const DeviceData = ({ deviceId }) => {
 
     return {
       id: node.id,
-      slug: node.slug,
+      slug: node?.fields?.slug,
       title: node?.frontmatter?.title,
       type: node?.frontmatter?.type,
       standard: node?.frontmatter?.standard?.toLowerCase(),
