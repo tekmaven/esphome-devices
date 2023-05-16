@@ -21,7 +21,7 @@ Pinout from [ProfiCook PC-WKS Template for Tasmota](https://templates.blakadder.
 
 ### Functions
 
-MCU Product ID: {“p”:”h6MjwrnldNTu4kX3”,”v”:”1.0.0”,”m”:1}
+MCU Product ID: `{"p":"h6MjwrnldNTu4kX3","v":"1.0.0","m":1}`
 
 dpID 101 controls kettle modes (corresponds to device buttons)
 

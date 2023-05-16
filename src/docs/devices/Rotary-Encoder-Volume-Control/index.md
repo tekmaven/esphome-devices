@@ -68,8 +68,6 @@ sensor:
 
 ## Home Assistant automations.yaml
 
-{% raw %}
-
 ```yaml
 - id: Adjust Volume on Rotary Encoder Move
   alias: Rotary Volume Change
@@ -82,5 +80,3 @@ sensor:
       data_template:
         volume_level: "{{ states.sensor.rotary_encoder.state | float / 100 }}"
 ```
-
-{% endraw %}

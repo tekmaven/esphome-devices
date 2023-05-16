@@ -18,23 +18,23 @@ There are two versions of this plug, a 10A version and a 15A version. The pinout
 
 ## GPIO Pinout
 
-| Pin    | Function (<2020)    | Function (>2020)    |
-| ------ | ------------------- | ------------------- |
-| GPIO0  | Red LED (inverted)  | Red LED (inverted)  |
-| GPIO2  | Blue LED (inverted) | Blue LED (inverted) |
-| GPIO4  |                     | HLW8012 - CF1       |
-| GPIO5  | HLW8012 - CF        | HLW8012 - CF        |
-| GPIO12 | HLW8012 - SEL       | HLW8012 - SEL       |
-| GPIO13 | Button (inverted)   | Button (inverted)   |
-| GPIO14 | HLW8012 - CF1       |                     |
-| GPIO15 | Relay               | Relay               |
+| Pin    | Function (pre 2020) | Function (after 2020) |
+| ------ | ------------------- | --------------------- |
+| GPIO0  | Red LED (inverted)  | Red LED (inverted)    |
+| GPIO2  | Blue LED (inverted) | Blue LED (inverted)   |
+| GPIO4  |                     | HLW8012 - CF1         |
+| GPIO5  | HLW8012 - CF        | HLW8012 - CF          |
+| GPIO12 | HLW8012 - SEL       | HLW8012 - SEL         |
+| GPIO13 | Button (inverted)   | Button (inverted)     |
+| GPIO14 | HLW8012 - CF1       |                       |
+| GPIO15 | Relay               | Relay                 |
 
 ## HLW8012 Calibration Values
 
-| Value   | <2020   | >2020   |
-| ------- | ------- | ------- |
-| Current | 0.00290 | 0.00117 |
-| Voltage | 940     | 755     |
+| Value   | pre 2020 | after 2020 |
+| ------- | -------- | ---------- |
+| Current | 0.00290  | 0.00117    |
+| Voltage | 940      | 755        |
 
 ## Basic Config
 
