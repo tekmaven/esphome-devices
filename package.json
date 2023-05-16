@@ -15,6 +15,7 @@
     "gatsby-plugin-google-gtag": "^5.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-no-sourcemaps": "^5.9.0",
     "gatsby-plugin-offline": "^6.9.0",
     "gatsby-plugin-sitemap": "^6.9.0",
     "prop-types": "^15.8.1",
@@ -28,8 +29,8 @@
     "gatsby-starter"
   ],
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop --verbose",
+    "build": "GATSBY_DISABLE_CACHE_PERSISTENCE=1 NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
+    "start": "NODE_OPTIONS=--max-old-space-size=16384 gatsby develop --verbose",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },

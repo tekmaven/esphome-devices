@@ -19,7 +19,6 @@ module.exports = {
     basePath: `/`,
   },
   trailingSlash: 'never',
-  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -68,5 +67,8 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: "gatsby-plugin-no-sourcemaps",
+    },
   ],
 };

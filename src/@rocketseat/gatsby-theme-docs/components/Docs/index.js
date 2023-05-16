@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "../Layout";
 import SEO from "../SEO";
@@ -11,7 +10,7 @@ import DeviceData from "../../../../components/DeviceData/devicedata";
 export default function Docs({ mdx, pageContext, children }) {
   const { prev, next, repositoryEditUrl, repositoryProvider } = pageContext;
   const { title, description, image, disableTableOfContents } = mdx.frontmatter;
-  const { headings, body, id } = mdx;
+  const { headings, id } = mdx;
   const { slug } = mdx.fields;
 
   return (
