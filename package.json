@@ -29,8 +29,8 @@
     "gatsby-starter"
   ],
   "scripts": {
-    "build": "GATSBY_DISABLE_CACHE_PERSISTENCE=1 NODE_OPTIONS=--max-old-space-size=8192 gatsby build",
-    "start": "NODE_OPTIONS=--max-old-space-size=16384 gatsby develop --verbose",
+    "build": "GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=16384 gatsby build",
+    "start": "GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=16384 gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
