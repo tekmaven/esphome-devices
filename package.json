@@ -7,21 +7,21 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "^4.0.1",
-    "algoliasearch": "^4.17.0",
-    "gatsby": "^5.9.1",
+    "algoliasearch": "^4.17.2",
+    "gatsby": "^5.10.0",
     "gatsby-plugin-algolia": "^1.0.3",
-    "gatsby-plugin-canonical-urls": "^5.9.0",
-    "gatsby-plugin-google-analytics": "^5.9.0",
-    "gatsby-plugin-google-gtag": "^5.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-canonical-urls": "^5.10.0",
+    "gatsby-plugin-google-analytics": "^5.10.0",
+    "gatsby-plugin-google-gtag": "^5.10.0",
+    "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-netlify": "^5.1.0",
-    "gatsby-plugin-no-sourcemaps": "^5.9.0",
-    "gatsby-plugin-offline": "^6.9.0",
-    "gatsby-plugin-sitemap": "^6.9.0",
+    "gatsby-plugin-no-sourcemaps": "^5.10.0",
+    "gatsby-plugin-offline": "^6.10.0",
+    "gatsby-plugin-sitemap": "^6.10.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-instantsearch-dom": "^6.39.1"
+    "react-instantsearch-dom": "^6.40.0"
   },
   "keywords": [
     "gatsby",
@@ -29,8 +29,8 @@
     "gatsby-starter"
   ],
   "scripts": {
-    "build": "GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=16384 gatsby build",
-    "start": "GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=16384 gatsby develop",
+    "build": "gatsby build",
+    "start": "GATSBY_CPU_COUNT=2 NODE_OPTIONS=--max-old-space-size=11384 gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
